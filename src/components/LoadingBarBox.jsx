@@ -1,14 +1,13 @@
 import {useState, useEffect} from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 import LoadingBar from './LoadingBar.jsx'
 
 export default function LoadingBarBox(props) {
     const [loadPercentage, setLoadPercentage] = useState(0);
     const [loadString, setLoadString] = useState("--------------------------------------------------");
-    const {setLoaded} = props;
-
+    const [loaded, setLoaded] = useState(false);
+    
+    
     useEffect(()=>{
         let i = 0;
         const myInterval = setInterval(()=>{
@@ -17,9 +16,9 @@ export default function LoadingBarBox(props) {
             i++;
             if (i > 100) {
                 clearInterval(myInterval);
-                setTimeout(()=>setLoaded(true), 500);
+                setTimeout(()=>setLoaded(true), 750);
             }
-        },25);
+        }, 15);
     },[]);
     
     function updateLoadString(percent) {
@@ -35,11 +34,17 @@ export default function LoadingBarBox(props) {
         setLoadString(myString);
     }
     
-
-    return(
-        <>
-            <p>Loading ...</p>
-            <LoadingBar string={loadString} percent={loadPercentage}/>
-        </>
-    );
+    if (!loaded) {
+        return(
+            <p>
+                Loading ...
+                <br/>
+                <LoadingBar string={loadString} percent={loadPercentage}/>
+            </p>
+        );
+    } else {
+        return null
+    }
+    
+    
 }
