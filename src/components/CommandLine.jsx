@@ -14,6 +14,7 @@ export default function CommandLine(props){
     if (!show) {
         return null;
     } else {
+        console.log("CommandLine.jsx is rendering");
         return (
             <p>
                 {serverString}
