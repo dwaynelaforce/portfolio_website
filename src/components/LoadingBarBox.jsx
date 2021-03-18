@@ -6,8 +6,10 @@ export default function LoadingBarBox(props) {
     const [loadPercentage, setLoadPercentage] = useState(0);
     const [loadString, setLoadString] = useState("--------------------------------------------------");
     const [loaded, setLoaded] = useState(false);
+    const {delay} = props;
     
-    
+    const loadingInterval = 15;
+
     useEffect(()=>{
         let i = 0;
         const myInterval = setInterval(()=>{
@@ -16,9 +18,9 @@ export default function LoadingBarBox(props) {
             i++;
             if (i > 100) {
                 clearInterval(myInterval);
-                setTimeout(()=>setLoaded(true), 750);
+                setTimeout(()=>setLoaded(true), delay);
             }
-        }, 15);
+        }, loadingInterval);
     },[]);
     
     function updateLoadString(percent) {

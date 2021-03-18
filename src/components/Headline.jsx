@@ -1,9 +1,9 @@
 import { useState } from 'react'
 export default function Headline(props){
     const [show, setShow] = useState(false);
-    const myDelay = 2750;
+    const {delay} = props;
     
-    setTimeout(() =>setShow(true), myDelay)
+    setTimeout(() =>setShow(true), delay)
 
     if (!show) {
         return null;

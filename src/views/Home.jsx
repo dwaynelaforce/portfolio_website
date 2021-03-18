@@ -10,10 +10,10 @@ export default function Home() {
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <Container>
-            <LoadingBarBox/>
-            <Headline/>
-            <Interface/>
+        <Container className="pt-3">
+            <LoadingBarBox delay={800}/>
+            <Headline delay={3000}/>
+            <Interface delay={4000}/>
         </Container>
     );
     

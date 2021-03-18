@@ -14,15 +14,18 @@ export default function Menu(props) {
         return (
             <ul style={{listStyle:"none"}}>
                 <li onMouseEnter={()=>{setSelection("About/")}}
-                    onClick={()=>{setContent("about")}}>
+                    onClick={()=>{setContent("about")}}
+                    className="mb-2">
                         About
                 </li>
                 <li onMouseEnter={()=>{setSelection("Projects/")}}
-                    onClick={()=>setContent("projects")}>
+                    onClick={()=>setContent("projects")}
+                    className="mb-2">
                         Projects
                 </li>
                 <li onMouseEnter={()=>{setSelection("Contacts/")}}
-                    onClick={()=>{setContent("contact")}}>
+                    onClick={()=>{setContent("contact")}}
+                    className="mb-2">
                         Contact
                 </li>
             </ul>
