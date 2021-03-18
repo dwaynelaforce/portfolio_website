@@ -14,7 +14,6 @@ export default function CommandLine(props){
     if (!show) {
         return null;
     } else {
-        console.log("CommandLine.jsx is rendering");
         return (
             <p>
                 <span style={{color:"#00ff62"}}>{serverString}</span>
@@ -28,7 +27,7 @@ export default function CommandLine(props){
                         hideWhenDoneDelay: 500,
                     }
                 }>
-                    <span>{text} </span>
+                <span>{text} </span>
                 </Typist>
                 <span>{selection}</span>
             </p>

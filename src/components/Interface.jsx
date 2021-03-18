@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Typist from 'react-typist';
+import Container from 'react-bootstrap/Container'
 import 'react-typist/dist/Typist.css'
 
 // components
@@ -26,27 +26,29 @@ export default function Interface(props){
         return null;
     } else {
         return (
-            <Row className="" style={{minHeight: "400px"}}>
-            <Col>
+            <Container className="m-0 p-0">
                 <Welcome/>
-                <CommandLine serverString={serverString} 
-                    dir="~ $ " text="cd menu/ " selection="" 
-                    delay={500} hideWhenDone={true}/>
-                
-                <CommandLine serverString={serverString} 
-                    dir="~/menu $ " text="ls -a " selection="" 
-                    delay={3000} hideWhenDone={true}/>
-                
-                <Menu setSelection={setSelection} setContent={setContent} delay={5000}/>
-                
-                <CommandLine serverString={serverString} 
-                    dir="~/menu $ " text="cd " selection={selection} 
-                    delay={6000} hideWhenDone={true}/>
-            </Col>
-            <Col>
-                <ContentBox content={content}/>
-            </Col>
-        </Row>
+                <Row className="" style={{minHeight: "400px"}}>
+                    <Col>
+                        <CommandLine serverString={serverString} 
+                            dir="~ $ " text="cd menu/ " selection="" 
+                            delay={500} hideWhenDone={true}/>
+                        
+                        <CommandLine serverString={serverString} 
+                            dir="~/menu $ " text="ls -a " selection="" 
+                            delay={3000} hideWhenDone={true}/>
+                        
+                        <Menu setSelection={setSelection} setContent={setContent} delay={5000}/>
+                        
+                        <CommandLine serverString={serverString} 
+                            dir="~/menu $ " text="cd " selection={selection} 
+                            delay={6000} hideWhenDone={true}/>
+                    </Col>
+                    <Col>
+                        <ContentBox content={content}/>
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 

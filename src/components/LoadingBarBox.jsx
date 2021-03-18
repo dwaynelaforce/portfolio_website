@@ -8,7 +8,7 @@ export default function LoadingBarBox(props) {
     const [loaded, setLoaded] = useState(false);
     const {delay} = props;
     
-    const loadingInterval = 15;
+    const loadingInterval = 18;
 
     useEffect(()=>{
         let i = 0;
@@ -38,7 +38,7 @@ export default function LoadingBarBox(props) {
     
     if (!loaded) {
         return(
-            <p>
+            <p className="m-3">
                 Loading ...
                 <br/>
                 <LoadingBar string={loadString} percent={loadPercentage}/>
