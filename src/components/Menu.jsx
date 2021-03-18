@@ -3,9 +3,10 @@ export default function Menu(props) {
     const [show, setShow] = useState(false);
     const {setSelection, setContent, delay} = props;
     useEffect(() =>{
-        setTimeout(()=>{
+        const timer = setTimeout(()=>{
             setShow(true);
-        },delay)
+        },delay);
+        return () => clearTimeout(timer);
     },[])
     
     if (!show) {

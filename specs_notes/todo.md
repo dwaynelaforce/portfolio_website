@@ -5,5 +5,7 @@ Projects figured out
 
 ## P2
 Contact is a form rather than just displaying my info
+
+## Done
 get user IP address and display
 store last visit in local storage and display

@@ -4,13 +4,21 @@ import {useEffect, useState} from 'react'
 export default function Welcome(props){
     const [ipAddress, setIpAddress] = useState("fetching...");
     const ipifyUrl = "https://api.ipify.org";
-    
-    const [ipGeoInfo, setIpGeoInfo] = useState("");
     const ipifyGeoUrl = "https://geo.ipify.org/api/v1?apiKey=at_rK7y00bZLzKJk28Wd1o5hPBP95i1N&ipAddress=8.8.8.8"
     
-    const [lastVisit, setLastVisit] = useState(null);
+    const [lastVisit, setLastVisit] = useState("");
 
     useEffect(() =>{
+        // check last visit and update
+        const cookies = window.localStorage;
+        const now = new Date().toString();
+        if (!cookies.getItem("lastVisit")) {
+            setLastVisit(now)
+        } else {
+            setLastVisit(cookies.getItem("lastVisit"));
+        }
+        cookies.setItem("lastVisit", now);
+        
         // fetch user's public IP address from ipify
         console.log("sending API request for basic IP info");
         axios.get(ipifyUrl)
@@ -34,17 +42,8 @@ export default function Welcome(props){
             console.log(error);
             setIpAddress("error retrieving IP address, try disabling ad blocker");
         });
-
-
-        // check last visit and update
-        const cookies = window.localStorage;
-        const now = new Date();
-        if (!cookies.getItem("lastVisit")) {
-            setLastVisit(now)
-        } else {
-            setLastVisit(cookies.getItem("lastVisit"));
-        }
-        cookies.setItem("lastVisit", now);
+        
+        
     },[])
     
     
