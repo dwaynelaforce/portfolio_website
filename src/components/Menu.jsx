@@ -13,23 +13,25 @@ export default function Menu(props) {
         return null;
     } else {
         return (
-            <ul className="menu">
-                <li onMouseEnter={()=>setSelection("about/")}
-                    onClick={()=>{setContent("about")}}
-                    className="mb-3 py-1 px-3 menuitem">
-                        About
-                </li>
-                <li onMouseEnter={()=>{setSelection("projects/")}}
-                    onClick={()=>setContent("projects")}
-                    className="mb-3 py-1 px-3 menuitem">
-                        Projects
-                </li>
-                <li onMouseEnter={()=>{setSelection("contact/")}}
-                    onClick={()=>{setContent("contact")}}
-                    className="mb-3 py-1 px-3 menuitem">
-                        Contact
-                </li>
-            </ul>
+            <>
+                <ul className="menu">
+                    <li onMouseEnter={()=>setSelection("about/")}
+                        onClick={()=>{setContent("about")}}
+                        className="mb-3 py-1 px-3 menuitem">
+                            About
+                    </li>
+                    <li onMouseEnter={()=>{setSelection("projects/")}}
+                        onClick={()=>setContent("projects")}
+                        className="mb-3 py-1 px-3 menuitem">
+                            Projects
+                    </li>
+                    <li onMouseEnter={()=>{setSelection("contact/")}}
+                        onClick={()=>{setContent("contact")}}
+                        className="mb-3 py-1 px-3 menuitem">
+                            Contact
+                    </li>
+                </ul>
+            </>
         );
     }
 

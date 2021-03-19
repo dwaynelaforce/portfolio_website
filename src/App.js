@@ -7,7 +7,9 @@ import Home from './views/Home.jsx'
 function App() {
   return (
     <>
-      <Row style={{height: "35px", backgroundColor: "#191a21"}}/>
+      <Row className="pl-4 pt-1" style={{height: "35px", backgroundColor: "#191a21"}}>
+        dwaynelaforce.dev
+      </Row>
       <Home/>
     </>
   );
