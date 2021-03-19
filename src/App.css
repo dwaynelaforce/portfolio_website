@@ -4,3 +4,19 @@
     background-color: #282a36;
     color: white;
 }
+ul.menu {
+    /* display: flex; */
+    list-style: none;
+}
+.menuitem {
+    color: white;
+    background-color: #282a36;
+    max-width: 200px;
+    border: 1px solid white;
+    font-size: 20px;
+}
+.menuitem:hover {
+    background-color: white;
+    color: #282a36;
+    cursor: pointer;
+}

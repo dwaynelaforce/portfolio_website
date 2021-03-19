@@ -13,20 +13,20 @@ export default function Menu(props) {
         return null;
     } else {
         return (
-            <ul style={{listStyle:"none"}}>
-                <li onMouseEnter={()=>{setSelection("About/")}}
+            <ul className="menu">
+                <li onMouseEnter={()=>setSelection("about/")}
                     onClick={()=>{setContent("about")}}
-                    className="mb-2">
+                    className="mb-3 py-1 px-3 menuitem">
                         About
                 </li>
-                <li onMouseEnter={()=>{setSelection("Projects/")}}
+                <li onMouseEnter={()=>{setSelection("projects/")}}
                     onClick={()=>setContent("projects")}
-                    className="mb-2">
+                    className="mb-3 py-1 px-3 menuitem">
                         Projects
                 </li>
-                <li onMouseEnter={()=>{setSelection("Contacts/")}}
+                <li onMouseEnter={()=>{setSelection("contact/")}}
                     onClick={()=>{setContent("contact")}}
-                    className="mb-2">
+                    className="mb-3 py-1 px-3 menuitem">
                         Contact
                 </li>
             </ul>
