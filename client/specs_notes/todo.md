@@ -1,9 +1,7 @@
 # P1
 About Me section written
 Projects figured out
-
-## P2
-Contact is a form rather than just displaying my info
+Contact is a form rather than just displaying my info (means setting up server backend)
 
 ## Done
 Menu links are responsive somehow (mvp would be use A tags)
