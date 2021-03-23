@@ -1,0 +1,12 @@
+// INSTRUCTIONS:
+// Change user and pass to be the correct gmail address and password (leave the quotes)
+// change this file's extention to .js
+// linked google account should have "Less secure app access" turned on and MFA/2FA turned off
+
+module.exports = {
+    service: 'gmail',
+    auth: {
+        user: 'MY_GMAIL_ADDRESS',
+        pass: 'MY_GMAIL_PASSWORD'
+    }
+}
