@@ -27,26 +27,32 @@ export default function Contact(){
 
     return(
         <Form onSubmit={submitHandler}>
-            <h4>Send me a message</h4>
-            <p>(pls dont break my legs)</p>
+            <h4>Hiring? Need something built?</h4>
+            <p>Send me a message</p>
             <Row>
-                <Form.Group as={Col} lg>
+                <Form.Group as={Col}>
+                    <Form.Label>Name</Form.Label>
                     <Form.Control name="name" type="text" placeholder="Your name" 
                     onChange={(e)=>setName(e.target.value)}
+                    style={{backgroundColor:"black", color:"inherit"}}
                     required/>
                 </Form.Group>
-                <Form.Group as={Col} lg>
+                <Form.Group as={Col}>
+                    <Form.Label>Email address</Form.Label>
                     <Form.Control name="email" type="email" placeholder="Your email" 
                     onChange={(e)=>setEmail(e.target.value)}
+                    style={{backgroundColor:"black", color:"inherit"}}
                     required/>
                 </Form.Group>
             </Row>
             <Form.Group>
+                <Form.Label>Message</Form.Label>
                 <Form.Control name="message" as="textarea" rows={3} placeholder="Write your message to me here" 
                 onChange={(e)=>setMessage(e.target.value)}
+                style={{backgroundColor:"black", color:"inherit"}}
                 required/>
             </Form.Group>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" variant="outline-light">Send</Button>
         </Form>
     );
 }

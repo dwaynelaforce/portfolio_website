@@ -29,7 +29,7 @@ export default function Interface(props){
             <Container className="m-0 p-0">
                 <Welcome/>
                 <Row className="" style={{minHeight: "400px"}}>
-                    <Col>
+                    <Col md>
                         <CommandLine serverString={serverString} 
                             dir="~ $ " text="cd menu/ " selection="" 
                             delay={500} hideWhenDone={true}/>
@@ -44,7 +44,7 @@ export default function Interface(props){
                             dir="~/menu $ " text="cd " selection={selection} 
                             delay={6000} hideWhenDone={true}/>
                     </Col>
-                    <Col>
+                    <Col md>
                         <ContentBox content={content}/>
                     </Col>
                 </Row>
