@@ -14,14 +14,17 @@ export default function Contact(){
     function submitHandler(e) {
         e.preventDefault();
         const userData = {name, email, message};
+        console.log("making post request to backend server API");
         axios.post('http://localhost:8000/api', userData)
             .then(res =>{
-                window.alert("Email sent successfully");
                 console.log(res);
+                window.alert("Email sent successfully");
+                // resets the form
+                e.target.reset();
             })
             .catch(err=>{
-                window.alert("There was an issue sending the email");
                 console.log(err);
+                window.alert("There was an issue sending the email");
             });
     }
 
