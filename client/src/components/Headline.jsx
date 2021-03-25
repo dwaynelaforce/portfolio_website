@@ -13,7 +13,7 @@ export default function Headline(props){
             <Container className="p-0">
                 <h1 className="display-2">Dwayne LaForce</h1>
                 <h1>Full Stack Developer</h1>
-                <h5>Java Springboot | Python Django | JavaScript MERN</h5>
+                {/* <h5>Java Springboot | Python Django | JavaScript MERN</h5> */}
                 <br/>
                 <hr className="my-2" style={{borderColor:"white"}}/>
                 <br/>
