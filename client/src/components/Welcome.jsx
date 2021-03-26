@@ -59,9 +59,9 @@ export default function Welcome(props){
                 <span>Last Visit: </span>
                 <span style={{color:"#00fff7"}}>{lastVisit}</span>
             </p>
-            <br/>
-            <hr className="my-2" style={{borderColor:"white"}}/>
-            <br/>
+            {/* <br/> */}
+            {/* <hr className="my-2" style={{borderColor:"white"}}/> */}
+            {/* <br/> */}
         </>
     )
 }
