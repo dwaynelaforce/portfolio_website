@@ -30,8 +30,6 @@ export default function About() {
                 <li>Bash, Git, Ubuntu, Debian</li>
             </ul>
             <p>Please visit my <a href="http://linkedin.com/in/dwaynelaforce">LinkedIn</a> for detailed work history and background.</p>
-            <h4>My story</h4>
-            <p>I went to school for music</p>
         </Container>
     );
 }
